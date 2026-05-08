@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>CNS Synthetic Pathology Atlas</title>
+    <meta
+      name="description"
+      content="A synthetic educational atlas of central nervous system pathology slides."
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="#atlas" aria-label="CNS Synthetic Pathology Atlas">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span>
+          <strong>CNS Pathology Atlas</strong>
+          <small>Synthetic H&amp;E teaching set</small>
+        </span>
+      </a>
+      <nav class="nav" aria-label="Atlas sections">
+        <a href="#atlas">Atlas</a>
+        <a href="#morphology">Morphology</a>
+        <a href="#audit">Audit</a>
+        <a href="#use">Use</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="hero-title">
+        <img
+          class="hero-image"
+          src="assets/slides/glioblastoma.png"
+          alt="Synthetic glioblastoma H and E microscopic field"
+        />
+        <div class="hero-overlay">
+          <p class="eyebrow">Central nervous system</p>
+          <h1 id="hero-title">Synthetic CNS Pathology Atlas</h1>
+          <p class="hero-copy">
+            Thirty generated teaching fields arranged for fast comparison
+            of tumor, vascular, inflammatory, demyelinating, and sellar patterns.
+          </p>
+          <a class="hero-action" href="#atlas">Open atlas</a>
+        </div>
+      </section>
+
+      <section class="atlas-shell" id="atlas" aria-labelledby="atlas-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Atlas browser</p>
+            <h2 id="atlas-title">CNS Tumor Slides</h2>
+          </div>
+          <p>
+            Synthetic educational images only. They are not patient material and
+            should not be used for clinical diagnosis.
+          </p>
+        </div>
+
+        <div class="toolbar" aria-label="Atlas controls">
+          <label class="search">
+            <span>Search</span>
+            <input
+              id="searchInput"
+              type="search"
+              placeholder="Diagnosis, grade, feature..."
+              autocomplete="off"
+            />
+          </label>
+          <div class="filters" aria-label="Filter cases">
+            <button class="filter-button active" type="button" data-filter="all">
+              All
+            </button>
+            <button class="filter-button" type="button" data-filter="glial">
+              Glial
+            </button>
+            <button class="filter-button" type="button" data-filter="embryonal">
+              Embryonal
+            </button>
+            <button class="filter-button" type="button" data-filter="neuronal">
+              Neuronal
+            </button>
+            <button class="filter-button" type="button" data-filter="meningeal">
+              Meningeal
+            </button>
+            <button class="filter-button" type="button" data-filter="nerve-sheath">
+              Nerve sheath
+            </button>
+            <button class="filter-button" type="button" data-filter="sellar">
+              Sellar
+            </button>
+            <button class="filter-button" type="button" data-filter="vascular">
+              Vascular
+            </button>
+            <button class="filter-button" type="button" data-filter="inflammatory">
+              Inflammatory
+            </button>
+            <button class="filter-button" type="button" data-filter="degenerative">
+              Degenerative
+            </button>
+            <button class="filter-button" type="button" data-filter="metastatic">
+              Metastatic
+            </button>
+            <button class="filter-button" type="button" data-filter="lymphoid">
+              Lymphoid
+            </button>
+          </div>
+        </div>
+
+        <div class="atlas-grid">
+          <aside class="case-list" aria-label="Slide list">
+            <div id="caseCards" class="case-cards"></div>
+          </aside>
+
+          <article class="viewer" aria-live="polite">
+            <div class="viewer-media">
+              <img id="viewerImage" src="" alt="" />
+            </div>
+            <div class="viewer-body">
+              <div class="viewer-heading">
+                <div>
+                  <p id="viewerCategory" class="eyebrow"></p>
+                  <h3 id="viewerTitle"></h3>
+                </div>
+                <span id="viewerGrade" class="grade"></span>
+              </div>
+              <p id="viewerSummary" class="summary"></p>
+              <dl class="fact-grid">
+                <div>
+                  <dt>Pattern</dt>
+                  <dd id="viewerPattern"></dd>
+                </div>
+                <div>
+                  <dt>Magnification</dt>
+                  <dd id="viewerMag"></dd>
+                </div>
+                <div>
+                  <dt>Stain</dt>
+                  <dd>H&amp;E</dd>
+                </div>
+              </dl>
+              <div>
+                <h4>Key Morphology</h4>
+                <ul id="viewerFeatures" class="feature-list"></ul>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="morphology-band" id="morphology" aria-labelledby="morphology-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Comparison</p>
+            <h2 id="morphology-title">Pattern-Based Review</h2>
+          </div>
+          <p>
+            Use the slide set to compare architecture before drilling into
+            cytology: palisades, rosettes, whorls, halos, vessels, necrosis,
+            inflammation, and sellar epithelial patterns.
+          </p>
+        </div>
+        <div class="comparison-grid">
+          <div>
+            <strong>Necrosis and vessels</strong>
+            <span>Glioblastoma highlights pseudopalisading necrosis and microvascular proliferation.</span>
+          </div>
+          <div>
+            <strong>Rosette-like structures</strong>
+            <span>Medulloblastoma and ependymoma contrast Homer Wright-like rosettes with perivascular pseudorosettes.</span>
+          </div>
+          <div>
+            <strong>Whorls and calcification</strong>
+            <span>Meningioma emphasizes meningothelial whorls and psammoma bodies.</span>
+          </div>
+          <div>
+            <strong>Glial texture</strong>
+            <span>Pilocytic astrocytoma and oligodendroglioma show classic low-grade architectural clues.</span>
+          </div>
+          <div>
+            <strong>Non-neoplastic injury</strong>
+            <span>Demyelinating plaque, infarct, and abscess contrast macrophage-rich injury patterns.</span>
+          </div>
+          <div>
+            <strong>Sellar and vascular lesions</strong>
+            <span>Pituitary adenoma, craniopharyngioma, AVM, and cavernous malformation broaden the CNS differential.</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="audit-band" id="audit" aria-labelledby="audit-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Evaluation</p>
+            <h2 id="audit-title">Accuracy Audit</h2>
+          </div>
+          <p>
+            Detailed analysis of the synthetic pathology images generated for this atlas. Evaluates biological realism, common AI artifacts, and limitations compared to real patient slides.
+          </p>
+        </div>
+        <div class="comparison-grid">
+          <div>
+            <strong>Glial Tumors</strong>
+            <span>Pseudopalisading necrosis is well-represented, but microvascular proliferation can lack precise endothelial layering. High cellularity and atypia are captured effectively.</span>
+          </div>
+          <div>
+            <strong>Embryonal Tumors</strong>
+            <span>Homer Wright rosettes capture the "small round blue cell" look nicely. However, individual apoptotic bodies and mitotic figures occasionally appear slightly cartoonish upon zooming in.</span>
+          </div>
+          <div>
+            <strong>Meningeal Tumors</strong>
+            <span>Whorls and psammoma bodies are remarkably accurate in architecture. High magnification nuclear features (e.g., pseudoinclusions, delicate grooves) can sometimes be slightly blurry.</span>
+          </div>
+          <div>
+            <strong>Vascular &amp; Degenerative</strong>
+            <span>Vascular malformations accurately show varied wall thickness. Degenerative stains mimic silver patterns well, though plaque distribution may lack typical cortical spacing rules.</span>
+          </div>
+          <div>
+            <strong>Inflammatory Lesions</strong>
+            <span>Neutrophils and macrophages show correct general tissue distribution and clustering. On closer inspection, individual inflammatory cell borders may merge artificially.</span>
+          </div>
+          <div>
+            <strong>Common AI Artifacts</strong>
+            <span>Noticeable artifacts include blurring at very high magnification, overly homogenous chromatin textures, and occasional repeating structural patterns or "hallucinated" pseudo-cells.</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="use-band" id="use" aria-labelledby="use-title">
+        <div>
+          <p class="eyebrow">Use note</p>
+          <h2 id="use-title">Built for Teaching, Not Diagnosis</h2>
+        </div>
+        <p>
+          Each field is AI-generated for atlas-style learning. Pair with
+          verified references, faculty review, and real slide sets for formal
+          training.
+        </p>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
