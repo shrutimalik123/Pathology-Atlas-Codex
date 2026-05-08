@@ -1,0 +1,22 @@
+{
+  "name": "pathology-atlas-codex",
+  "version": "1.0.0",
+  "description": "A synthetic educational atlas of central nervous system pathology slides.",
+  "main": "index.html",
+  "scripts": {
+    "start": "serve .",
+    "build": "echo 'No build step required'"
+  },
+  "keywords": [
+    "pathology",
+    "cns",
+    "atlas",
+    "synthetic",
+    "education"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "serve": "^14.2.3"
+  }
+}
